@@ -7,18 +7,21 @@
     <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
 </head>
 <body>
-    <header>
-        <h1>You're Invited to the Opening Ceremony for Coffee Dream: Crafted with Love</h1>
-        <h2>17/2/24</h2>
-    </header>
-    <section id="description">
-        <p>Welcome to Coffee Dream, where every cup is a journey of flavors, meticulously crafted with love and passion. Join us for the grand opening ceremony to experience the essence of true coffee craftsmanship and become part of our dream.</p>
-    </section>
+    <div class="container"> <!-- Container to control the width of the content -->
+        <header>
+            <h1>You're Invited to the Opening Ceremony for Coffee Dream: Crafted with Love</h1>
+            <h2>17/2/24</h2>
+        </header>
+        <section id="description">
+            <p>Welcome to Coffee Dream, where every cup is a journey of flavors, meticulously crafted with love and passion. Join us for the grand opening ceremony to experience the essence of true coffee craftsmanship and become part of our dream.</p>
+        </section>
+    </div>
     <section id="rsvp">
         <h3>RSVP</h3>
         <form id="rsvpForm">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" pattern=".+@gmail\.com" title="Please use a Gmail address (example@gmail.com)" required>
+            <!-- Updated email input with pattern for Gmail addresses -->
+            <input type="email" id="email" name="email" required pattern=".+@gmail\.com" title="Please enter a Gmail address.">
             <label for="attendance">Will you attend?</label>
             <select id="attendance" name="attendance" required>
                 <option value="">Please choose an option</option>
