@@ -6,46 +6,48 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif; /* Modern and readable font */
-    background-color: #fff5ee; /* Warm and inviting background color */
+    font-family: 'Arial', sans-serif;
+    background-color: #fff5ee;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transition: background-image 0.5s ease-in-out; /* Smooth transition for background changes */
+    transition: background-image 0.5s ease-in-out;
     padding: 20px;
-    color: #6b4f4f; /* Coffee-inspired text color */
+    color: #6b4f4f;
 }
 
 header {
-    text-align: center; /* Centers the header content */
+    text-align: center;
     padding: 20px 0;
 }
 
 h1 {
-    font-size: calc(18px + 2vmin); /* Responsive font size for main heading */
+    font-size: calc(18px + 2vmin);
     margin-bottom: 10px;
 }
 
 h2 {
-    font-size: calc(16px + 1vmin); /* Responsive font size for subheading */
+    font-size: calc(16px + 1vmin);
     margin-bottom: 20px;
-    color: #a67b5b; /* Slightly different color for emphasis */
+    color: #a67b5b;
 }
 
-/* Description Section */
 #description {
-    font-size: 16px; /* Readable text size */
+    font-size: 16px;
     margin-bottom: 30px;
-    padding: 0 10px; /* Padding for better text display */
+    padding: 0 10px;
+    text-align: justify;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* RSVP Section */
 #rsvp {
-    background-color: #f7f0e8; /* Light background for form section */
+    background-color: rgba(247, 240, 232, 0.9);
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 8px; /* Adds rounded corners */
-    text-align: center; /* Center align for smaller screens */
+    border-radius: 8px;
+    text-align: center;
 }
 
 #rsvp h3 {
@@ -54,55 +56,53 @@ h2 {
 
 #rsvpForm {
     display: flex;
-    flex-direction: column; /* Stacks form elements vertically */
-    gap: 10px; /* Adds space between form elements */
-    align-items: center; /* Centers form elements */
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
 }
 
 #rsvpForm label {
-    font-weight: bold; /* Makes label texts bold */
-    margin-top: 10px; /* Adds margin above labels for spacing */
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 #rsvpForm input,
 #rsvpForm select {
-    padding: 10px; /* Adds padding inside inputs and select */
-    border: 1px solid #ccc; /* Subtle border for inputs */
-    border-radius: 4px; /* Rounded corners for inputs */
-    width: 90%; /* Ensures input fields are responsive */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 90%;
 }
 
 #rsvpForm button {
-    background-color: #a67b5b; /* Coffee-inspired button color */
+    background-color: #a67b5b;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
-    cursor: pointer; /* Changes cursor to indicate it's clickable */
-    margin-top: 20px; /* Adds space above the button */
-    width: auto; /* Auto width for the button */
+    cursor: pointer;
+    margin-top: 20px;
+    width: auto;
 }
 
 #rsvpForm button:hover {
-    background-color: #8d6548; /* Darkens button on hover for interaction feedback */
+    background-color: #8d6548;
 }
 
-/* Confirmation Message Styles */
 #confirmationMessage {
-    display: none; /* Initially hidden */
+    display: none;
     margin-top: 20px;
     text-align: center;
-    color: green; /* Indicates a successful action */
+    color: green;
 }
 
-/* Responsive Styles for larger screens */
 @media (min-width: 768px) {
     body {
         padding: 40px;
     }
 
     h1 {
-        font-size: 28px; /* Larger text for desktop */
+        font-size: 28px;
     }
 
     h2 {
@@ -110,16 +110,17 @@ h2 {
     }
 
     #description {
-        font-size: 18px; /* Slightly larger text for readability */
+        font-size: 18px;
+        padding: 0 20px;
     }
 
     #rsvpForm input,
     #rsvpForm select {
-        padding: 15px; /* Larger padding for desktop */
-        width: 50%; /* Adjusts width for desktop viewing */
+        padding: 15px;
+        width: 50%;
     }
 
     #rsvpForm button {
-        padding: 15px 30px; /* Larger button for easier interaction */
+        padding: 15px 30px;
     }
 }
