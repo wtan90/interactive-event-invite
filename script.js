@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // Prevent the form from submitting the traditional way
         event.preventDefault();
 
+        // Get the value of the email field from the form
+        var email = document.getElementById('email').value;
+
         // Get the value of the attendance field from the form
         var attendance = document.getElementById('attendance').value;
 
@@ -17,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Get the body element to change the background
         var body = document.body; 
 
-        // Check if the user selected 'yes' for attending
-        if (attendance === 'yes') {
+        // Check if the user selected 'yes' for attending and the email is a Gmail address
+        if (attendance === 'yes' && email.endsWith('@gmail.com')) {
             // Set the confirmation message with a party emoji and a positive message
             confirmationMessage.innerHTML = '🎉 Thank you for your RSVP! We look forward to seeing you!';
             
@@ -26,13 +29,21 @@ document.addEventListener('DOMContentLoaded', function() {
             body.style.backgroundImage = "url('https://media.giphy.com/media/e1yiWMt3XJvP2/giphy.gif')";
             body.style.backgroundSize = "cover"; // Ensure the image covers the whole background
             body.style.backgroundPosition = "center"; // Center the background image
-        } else {
+        } else if (attendance === 'no') {
             // Set a different message if the user is not attending
             confirmationMessage.innerHTML = 'We\'re sorry to hear you can\'t make it. Hope to see you next time!';
             
             // Reset the background if not attending
             body.style.backgroundImage = "";
+        } else {
+            // If the email is not a Gmail address, prompt the user to enter a valid Gmail address
+            confirmationMessage.innerHTML = 'Please enter a valid Gmail address to RSVP.';
         }
+
+        // Display the confirmation message
+        confirmationMessage.style.display = 'block';
+    });
+});
 
         // Display the confirmation message
         confirmationMessage.style.display = 'block';
