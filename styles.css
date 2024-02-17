@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial', sans-serif; /* Modern and readable font */
     background-color: #fff5ee; /* Warm and inviting background color */
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,6 +14,12 @@ body {
     transition: background-image 0.5s ease-in-out; /* Smooth transition for background changes */
     padding: 20px;
     color: #6b4f4f; /* Coffee-inspired text color */
+}
+
+/* Container for header and description to control max-width */
+.container {
+    max-width: 800px; /* Adjust as needed */
+    margin: auto; /* Center the container */
 }
 
 header {
@@ -34,16 +40,14 @@ h2 {
 
 /* Description Section */
 #description {
-    font-size: 16px;
-    margin: 20px auto; /* Centers the text and provides top and bottom margin */
-    padding: 0 5%; /* Provides padding to prevent text from touching the sides */
-    max-width: 800px; /* Maximum width to ensure readability */
-    text-align: center; /* Aligns the text to the center */
+    font-size: 16px; /* Readable text size */
+    margin-bottom: 30px;
+    padding: 0 10px; /* Padding for better text display */
 }
 
 /* RSVP Section */
 #rsvp {
-    background-color: rgba(247, 240, 232, 0.9); /* Light background with opacity */
+    background-color: rgba(247, 240, 232, 0.9); /* Light background with transparency */
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px; /* Adds rounded corners */
@@ -92,16 +96,9 @@ h2 {
 /* Confirmation Message Styles */
 #confirmationMessage {
     display: none; /* Initially hidden */
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255,255,255,0.8);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-top: 20px;
+    text-align: center;
     color: green; /* Indicates a successful action */
-    z-index: 1000; /* Ensures it's above other elements */
 }
 
 /* Responsive Styles for larger screens */
@@ -110,17 +107,9 @@ h2 {
         padding: 40px;
     }
 
-    h1 {
-        font-size: 28px; /* Larger text for desktop */
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    #description {
-        font-size: 18px; /* Slightly larger text for readability on larger screens */
-        padding: 0 10%;
+    h1, h2, #description {
+        max-width: 800px; /* Adjusts max width for readability */
+        margin: auto; /* Center aligns within the container */
     }
 
     #rsvpForm input,
