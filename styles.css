@@ -1,0 +1,125 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Modern and readable font */
+    background-color: #fff5ee; /* Warm and inviting background color */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out; /* Smooth transition for background changes */
+    padding: 20px;
+    color: #6b4f4f; /* Coffee-inspired text color */
+}
+
+header {
+    text-align: center; /* Centers the header content */
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: calc(18px + 2vmin); /* Responsive font size for main heading */
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: calc(16px + 1vmin); /* Responsive font size for subheading */
+    margin-bottom: 20px;
+    color: #a67b5b; /* Slightly different color for emphasis */
+}
+
+/* Description Section */
+#description {
+    font-size: 16px; /* Readable text size */
+    margin-bottom: 30px;
+    padding: 0 10px; /* Padding for better text display */
+}
+
+/* RSVP Section */
+#rsvp {
+    background-color: #f7f0e8; /* Light background for form section */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px; /* Adds rounded corners */
+    text-align: center; /* Center align for smaller screens */
+}
+
+#rsvp h3 {
+    margin-bottom: 15px;
+}
+
+#rsvpForm {
+    display: flex;
+    flex-direction: column; /* Stacks form elements vertically */
+    gap: 10px; /* Adds space between form elements */
+    align-items: center; /* Centers form elements */
+}
+
+#rsvpForm label {
+    font-weight: bold; /* Makes label texts bold */
+    margin-top: 10px; /* Adds margin above labels for spacing */
+}
+
+#rsvpForm input,
+#rsvpForm select {
+    padding: 10px; /* Adds padding inside inputs and select */
+    border: 1px solid #ccc; /* Subtle border for inputs */
+    border-radius: 4px; /* Rounded corners for inputs */
+    width: 90%; /* Ensures input fields are responsive */
+}
+
+#rsvpForm button {
+    background-color: #a67b5b; /* Coffee-inspired button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /* Changes cursor to indicate it's clickable */
+    margin-top: 20px; /* Adds space above the button */
+    width: auto; /* Auto width for the button */
+}
+
+#rsvpForm button:hover {
+    background-color: #8d6548; /* Darkens button on hover for interaction feedback */
+}
+
+/* Confirmation Message Styles */
+#confirmationMessage {
+    display: none; /* Initially hidden */
+    margin-top: 20px;
+    text-align: center;
+    color: green; /* Indicates a successful action */
+}
+
+/* Responsive Styles for larger screens */
+@media (min-width: 768px) {
+    body {
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 28px; /* Larger text for desktop */
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    #description {
+        font-size: 18px; /* Slightly larger text for readability */
+    }
+
+    #rsvpForm input,
+    #rsvpForm select {
+        padding: 15px; /* Larger padding for desktop */
+        width: 50%; /* Adjusts width for desktop viewing */
+    }
+
+    #rsvpForm button {
+        padding: 15px 30px; /* Larger button for easier interaction */
+    }
+}
